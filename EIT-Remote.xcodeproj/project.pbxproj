@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		58264609294E4AF90008923C /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 58264608294E4AF90008923C /* SQLite */; };
-		5826460B294E4DC00008923C /* Patients.db in Resources */ = {isa = PBXBuildFile; fileRef = 5826460A294E4DC00008923C /* Patients.db */; };
 		5826460E294E52CB0008923C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5826460D294E52CB0008923C /* FirebaseAuth */; };
 		58264610294E52CB0008923C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5826460F294E52CB0008923C /* FirebaseDatabase */; };
 		58264612294E52CB0008923C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 58264611294E52CB0008923C /* FirebaseFirestore */; };
@@ -29,7 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5826460A294E4DC00008923C /* Patients.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Patients.db; sourceTree = "<group>"; };
 		58264613294E65EA0008923C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58264615294E71D60008923C /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		58264617294E72340008923C /* PatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientView.swift; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 		58390B7E29360C2E003AF4C7 = {
 			isa = PBXGroup;
 			children = (
-				5826460A294E4DC00008923C /* Patients.db */,
 				58390B8929360C2E003AF4C7 /* EIT-Remote */,
 				58390B8829360C2E003AF4C7 /* Products */,
 				582646212950CEAA0008923C /* Frameworks */,
@@ -208,7 +205,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5826460B294E4DC00008923C /* Patients.db in Resources */,
 				58264614294E65EA0008923C /* GoogleService-Info.plist in Resources */,
 				58390B9229360C2F003AF4C7 /* Preview Assets.xcassets in Resources */,
 				58390B8F29360C2F003AF4C7 /* Assets.xcassets in Resources */,
