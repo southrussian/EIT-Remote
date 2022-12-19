@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58264609294E4AF90008923C /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 58264608294E4AF90008923C /* SQLite */; };
+		5826460B294E4DC00008923C /* Patients.db in Resources */ = {isa = PBXBuildFile; fileRef = 5826460A294E4DC00008923C /* Patients.db */; };
+		5826460E294E52CB0008923C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5826460D294E52CB0008923C /* FirebaseAuth */; };
+		58264610294E52CB0008923C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5826460F294E52CB0008923C /* FirebaseDatabase */; };
+		58264612294E52CB0008923C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 58264611294E52CB0008923C /* FirebaseFirestore */; };
+		58264614294E65EA0008923C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58264613294E65EA0008923C /* GoogleService-Info.plist */; };
+		58264616294E71D60008923C /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58264615294E71D60008923C /* ListView.swift */; };
+		58264618294E72340008923C /* PatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58264617294E72340008923C /* PatientView.swift */; };
+		5826461A294E761F0008923C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58264619294E761F0008923C /* DataManager.swift */; };
+		5826461D29509C170008923C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5826461C29509C170008923C /* LoginView.swift */; };
+		5826462029509CE00008923C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5826461F29509CE00008923C /* Color.swift */; };
+		582646232950CEAA0008923C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 582646222950CEAA0008923C /* FirebaseFirestoreSwift */; };
+		582646252950CEC30008923C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 582646242950CEC30008923C /* FirebaseStorage */; };
+		582646282950D2680008923C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582646272950D2680008923C /* User.swift */; };
+		5826462A2950F2A70008923C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582646292950F2A70008923C /* LoadingView.swift */; };
 		58390B8B29360C2E003AF4C7 /* EIT_RemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58390B8A29360C2E003AF4C7 /* EIT_RemoteApp.swift */; };
 		58390B8D29360C2E003AF4C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58390B8C29360C2E003AF4C7 /* ContentView.swift */; };
 		58390B8F29360C2F003AF4C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58390B8E29360C2F003AF4C7 /* Assets.xcassets */; };
@@ -14,6 +29,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5826460A294E4DC00008923C /* Patients.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Patients.db; sourceTree = "<group>"; };
+		58264613294E65EA0008923C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		58264615294E71D60008923C /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		58264617294E72340008923C /* PatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientView.swift; sourceTree = "<group>"; };
+		58264619294E761F0008923C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		5826461C29509C170008923C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5826461F29509CE00008923C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		582646272950D2680008923C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		582646292950F2A70008923C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		58390B8729360C2E003AF4C7 /* EIT-Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EIT-Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58390B8A29360C2E003AF4C7 /* EIT_RemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EIT_RemoteApp.swift; sourceTree = "<group>"; };
 		58390B8C29360C2E003AF4C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +50,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582646232950CEAA0008923C /* FirebaseFirestoreSwift in Frameworks */,
+				58264610294E52CB0008923C /* FirebaseDatabase in Frameworks */,
+				58264612294E52CB0008923C /* FirebaseFirestore in Frameworks */,
+				58264609294E4AF90008923C /* SQLite in Frameworks */,
+				5826460E294E52CB0008923C /* FirebaseAuth in Frameworks */,
+				582646252950CEC30008923C /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5826461B29509BEC0008923C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5826461C29509C170008923C /* LoginView.swift */,
+				582646292950F2A70008923C /* LoadingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5826461E29509CCD0008923C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5826461F29509CE00008923C /* Color.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		582646212950CEAA0008923C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		582646262950D25E0008923C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				582646272950D2680008923C /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		58390B7E29360C2E003AF4C7 = {
 			isa = PBXGroup;
 			children = (
+				5826460A294E4DC00008923C /* Patients.db */,
 				58390B8929360C2E003AF4C7 /* EIT-Remote */,
 				58390B8829360C2E003AF4C7 /* Products */,
+				582646212950CEAA0008923C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,9 +115,16 @@
 		58390B8929360C2E003AF4C7 /* EIT-Remote */ = {
 			isa = PBXGroup;
 			children = (
+				582646262950D25E0008923C /* Model */,
+				5826461E29509CCD0008923C /* Extension */,
+				5826461B29509BEC0008923C /* View */,
 				58390B8A29360C2E003AF4C7 /* EIT_RemoteApp.swift */,
 				58390B8C29360C2E003AF4C7 /* ContentView.swift */,
+				58264615294E71D60008923C /* ListView.swift */,
+				58264617294E72340008923C /* PatientView.swift */,
+				58264619294E761F0008923C /* DataManager.swift */,
 				58390B8E29360C2F003AF4C7 /* Assets.xcassets */,
+				58264613294E65EA0008923C /* GoogleService-Info.plist */,
 				58390B9029360C2F003AF4C7 /* Preview Content */,
 			);
 			path = "EIT-Remote";
@@ -83,6 +154,14 @@
 			dependencies = (
 			);
 			name = "EIT-Remote";
+			packageProductDependencies = (
+				58264608294E4AF90008923C /* SQLite */,
+				5826460D294E52CB0008923C /* FirebaseAuth */,
+				5826460F294E52CB0008923C /* FirebaseDatabase */,
+				58264611294E52CB0008923C /* FirebaseFirestore */,
+				582646222950CEAA0008923C /* FirebaseFirestoreSwift */,
+				582646242950CEC30008923C /* FirebaseStorage */,
+			);
 			productName = "EIT-Remote";
 			productReference = 58390B8729360C2E003AF4C7 /* EIT-Remote.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +190,10 @@
 				Base,
 			);
 			mainGroup = 58390B7E29360C2E003AF4C7;
+			packageReferences = (
+				58264607294E4AF90008923C /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+				5826460C294E52CB0008923C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 58390B8829360C2E003AF4C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +208,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5826460B294E4DC00008923C /* Patients.db in Resources */,
+				58264614294E65EA0008923C /* GoogleService-Info.plist in Resources */,
 				58390B9229360C2F003AF4C7 /* Preview Assets.xcassets in Resources */,
 				58390B8F29360C2F003AF4C7 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +222,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5826461D29509C170008923C /* LoginView.swift in Sources */,
+				58264618294E72340008923C /* PatientView.swift in Sources */,
+				5826462029509CE00008923C /* Color.swift in Sources */,
+				5826461A294E761F0008923C /* DataManager.swift in Sources */,
+				582646282950D2680008923C /* User.swift in Sources */,
 				58390B8D29360C2E003AF4C7 /* ContentView.swift in Sources */,
 				58390B8B29360C2E003AF4C7 /* EIT_RemoteApp.swift in Sources */,
+				58264616294E71D60008923C /* ListView.swift in Sources */,
+				5826462A2950F2A70008923C /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +431,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58264607294E4AF90008923C /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+		5826460C294E52CB0008923C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58264608294E4AF90008923C /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58264607294E4AF90008923C /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+		5826460D294E52CB0008923C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5826460C294E52CB0008923C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		5826460F294E52CB0008923C /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5826460C294E52CB0008923C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		58264611294E52CB0008923C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5826460C294E52CB0008923C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		582646222950CEAA0008923C /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5826460C294E52CB0008923C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		582646242950CEC30008923C /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5826460C294E52CB0008923C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58390B7F29360C2E003AF4C7 /* Project object */;
 }

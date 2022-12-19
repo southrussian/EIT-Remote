@@ -7,16 +7,17 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    @AppStorage("log_status") var logstatus: Bool = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        if logstatus {
+            Text("Main view")
+        } else {
+            LoginView()
         }
-        .padding()
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
