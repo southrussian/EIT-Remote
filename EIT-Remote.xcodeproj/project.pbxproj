@@ -21,6 +21,7 @@
 		582646252950CEC30008923C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 582646242950CEC30008923C /* FirebaseStorage */; };
 		582646282950D2680008923C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582646272950D2680008923C /* User.swift */; };
 		5826462A2950F2A70008923C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582646292950F2A70008923C /* LoadingView.swift */; };
+		5826462D29520AD80008923C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5826462B29520AD80008923C /* Model.xcdatamodeld */; };
 		58390B8B29360C2E003AF4C7 /* EIT_RemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58390B8A29360C2E003AF4C7 /* EIT_RemoteApp.swift */; };
 		58390B8D29360C2E003AF4C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58390B8C29360C2E003AF4C7 /* ContentView.swift */; };
 		58390B8F29360C2F003AF4C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58390B8E29360C2F003AF4C7 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		5826461F29509CE00008923C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		582646272950D2680008923C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		582646292950F2A70008923C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		5826462C29520AD80008923C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		58390B8729360C2E003AF4C7 /* EIT-Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EIT-Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58390B8A29360C2E003AF4C7 /* EIT_RemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EIT_RemoteApp.swift; sourceTree = "<group>"; };
 		58390B8C29360C2E003AF4C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				58390B8E29360C2F003AF4C7 /* Assets.xcassets */,
 				58264613294E65EA0008923C /* GoogleService-Info.plist */,
 				58390B9029360C2F003AF4C7 /* Preview Content */,
+				5826462B29520AD80008923C /* Model.xcdatamodeld */,
 			);
 			path = "EIT-Remote";
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				582646282950D2680008923C /* User.swift in Sources */,
 				58390B8D29360C2E003AF4C7 /* ContentView.swift in Sources */,
 				58390B8B29360C2E003AF4C7 /* EIT_RemoteApp.swift in Sources */,
+				5826462D29520AD80008923C /* Model.xcdatamodeld in Sources */,
 				58264616294E71D60008923C /* ListView.swift in Sources */,
 				5826462A2950F2A70008923C /* LoadingView.swift in Sources */,
 			);
@@ -358,11 +362,11 @@
 				DEVELOPMENT_TEAM = L5N89ZQYBM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,11 +391,11 @@
 				DEVELOPMENT_TEAM = L5N89ZQYBM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,6 +483,19 @@
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		5826462B29520AD80008923C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5826462C29520AD80008923C /* Model.xcdatamodel */,
+			);
+			currentVersion = 5826462C29520AD80008923C /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 58390B7F29360C2E003AF4C7 /* Project object */;
 }

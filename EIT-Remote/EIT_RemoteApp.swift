@@ -16,7 +16,7 @@ struct EIT_RemoteApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            ContentView()
         }
     }
 }

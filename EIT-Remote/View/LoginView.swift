@@ -35,7 +35,7 @@ struct LoginView: View {
                     .font(.system(size: 40, weight: .bold, design: .rounded))
                     .offset(x: -50, y: -50)
                 
-                TextField("", text: $email)
+                TextField(" ", text: $email)
                     .foregroundColor(Color.theme.accent)
                     .textFieldStyle(.plain)
                     .placeholder(when: email.isEmpty) {
