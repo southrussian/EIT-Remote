@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         VStack{
             if status{
-                Home()
+                Tab()
             }
             else{
                 SignIn()
@@ -34,19 +34,19 @@ struct ContentView: View {
     }
 }
 
-struct Home : View {
-    var body : some View{
-        VStack{
-            Text("Домашний экран")
-            Button(action: {
-                UserDefaults.standard.set(false, forKey: "status")
-                NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
-            }) {
-                Text("Выйти")
-            }
-        }
-    }
-}
+//struct Home: View {
+//    var body: some View{
+//        VStack{
+//            Text("Домашний экран")
+//            Button(action: {
+//                UserDefaults.standard.set(false, forKey: "status")
+//                NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
+//            }) {
+//                Text("Выйти")
+//            }
+//        }
+//    }
+//}
 
 struct SignIn : View {
     
@@ -76,7 +76,7 @@ struct SignIn : View {
                             HStack {
                                 TextField("Введите адрес электронной почты", text: $user)
                                 if user != ""{
-                                    Image("check").foregroundColor(Color.init(.label))
+                                    Image(systemName: "checkmark").foregroundColor(Color.init(.label))
                                 }
                             }
                             
@@ -186,7 +186,7 @@ struct SignUp : View {
                             
                             if user != ""{
                                 
-                                Image("check").foregroundColor(Color.init(.label))
+                                Image(systemName: "checkmark").foregroundColor(Color.init(.label))
                             }
                             
                         }
@@ -247,30 +247,22 @@ struct SignUp : View {
 }
 
 
-func signInWithEmail(email: String,password : String,completion: @escaping (Bool,String)->Void){
-    
+func signInWithEmail(email: String,password : String,completion: @escaping (Bool,String)->Void) {
     Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
-        
         if err != nil{
-            
             completion(false,(err?.localizedDescription)!)
             return
         }
-        
         completion(true,(res?.user.email)!)
     }
 }
 
 func signUpWithEmail(email: String, password : String,completion: @escaping (Bool,String)->Void) {
-    
     Auth.auth().createUser(withEmail: email, password: password) { (res, err) in
-        
         if err != nil{
-            
             completion(false,(err?.localizedDescription)!)
             return
         }
-        
         completion(true,(res?.user.email)!)
     }
 }

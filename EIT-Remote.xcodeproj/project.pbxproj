@@ -12,37 +12,50 @@
 		58264610294E52CB0008923C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5826460F294E52CB0008923C /* FirebaseDatabase */; };
 		58264612294E52CB0008923C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 58264611294E52CB0008923C /* FirebaseFirestore */; };
 		58264614294E65EA0008923C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58264613294E65EA0008923C /* GoogleService-Info.plist */; };
-		58264616294E71D60008923C /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58264615294E71D60008923C /* ListView.swift */; };
-		58264618294E72340008923C /* PatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58264617294E72340008923C /* PatientView.swift */; };
-		5826461A294E761F0008923C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58264619294E761F0008923C /* DataManager.swift */; };
-		5826461D29509C170008923C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5826461C29509C170008923C /* LoginView.swift */; };
 		5826462029509CE00008923C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5826461F29509CE00008923C /* Color.swift */; };
 		582646232950CEAA0008923C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 582646222950CEAA0008923C /* FirebaseFirestoreSwift */; };
 		582646252950CEC30008923C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 582646242950CEC30008923C /* FirebaseStorage */; };
-		582646282950D2680008923C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582646272950D2680008923C /* User.swift */; };
-		5826462A2950F2A70008923C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582646292950F2A70008923C /* LoadingView.swift */; };
-		5826462D29520AD80008923C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5826462B29520AD80008923C /* Model.xcdatamodeld */; };
+		582981512969F8D000D2B28C /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582981502969F8D000D2B28C /* Tab.swift */; };
+		582981532969FA9F00D2B28C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582981522969FA9F00D2B28C /* SettingsView.swift */; };
+		582981552969FB0500D2B28C /* PatientsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582981542969FB0500D2B28C /* PatientsListView.swift */; };
+		582981572969FB1900D2B28C /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582981562969FB1900D2B28C /* ScheduleView.swift */; };
+		58298159296A0DAD00D2B28C /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58298158296A0DAD00D2B28C /* SplashScreenView.swift */; };
+		5829815B296DA82B00D2B28C /* Patients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5829815A296DA82B00D2B28C /* Patients.swift */; };
+		582981602974B65400D2B28C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5829815F2974B65400D2B28C /* Task.swift */; };
+		582981632975EBE800D2B28C /* PatientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582981622975EBE800D2B28C /* PatientsViewModel.swift */; };
+		582981662975F4C200D2B28C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 582981652975F4C200D2B28C /* SDWebImage */; };
+		582981692975F5A700D2B28C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 582981682975F5A700D2B28C /* SDWebImageSwiftUI */; };
+		5829816C2975F6CA00D2B28C /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5829816B2975F6CA00D2B28C /* CachedAsyncImage */; };
+		5829816E2975F8C000D2B28C /* PatientsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5829816D2975F8C000D2B28C /* PatientsDetailsView.swift */; };
+		582981702976016500D2B28C /* PatientsEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5829816F2976016500D2B28C /* PatientsEditView.swift */; };
+		582981722976029200D2B28C /* PatientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582981712976029200D2B28C /* PatientViewModel.swift */; };
 		58390B8B29360C2E003AF4C7 /* EIT_RemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58390B8A29360C2E003AF4C7 /* EIT_RemoteApp.swift */; };
 		58390B8D29360C2E003AF4C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58390B8C29360C2E003AF4C7 /* ContentView.swift */; };
 		58390B8F29360C2F003AF4C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58390B8E29360C2F003AF4C7 /* Assets.xcassets */; };
 		58390B9229360C2F003AF4C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58390B9129360C2F003AF4C7 /* Preview Assets.xcassets */; };
+		587ADCDF29E01D7D005EC986 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587ADCDE29E01D7D005EC986 /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		58264613294E65EA0008923C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		58264615294E71D60008923C /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		58264617294E72340008923C /* PatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientView.swift; sourceTree = "<group>"; };
-		58264619294E761F0008923C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		5826461C29509C170008923C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5826461F29509CE00008923C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		582646272950D2680008923C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		582646292950F2A70008923C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		5826462C29520AD80008923C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		582981502969F8D000D2B28C /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		582981522969FA9F00D2B28C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		582981542969FB0500D2B28C /* PatientsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsListView.swift; sourceTree = "<group>"; };
+		582981562969FB1900D2B28C /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		58298158296A0DAD00D2B28C /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		5829815A296DA82B00D2B28C /* Patients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patients.swift; sourceTree = "<group>"; };
+		5829815F2974B65400D2B28C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		582981622975EBE800D2B28C /* PatientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsViewModel.swift; sourceTree = "<group>"; };
+		5829816D2975F8C000D2B28C /* PatientsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsDetailsView.swift; sourceTree = "<group>"; };
+		5829816F2976016500D2B28C /* PatientsEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsEditView.swift; sourceTree = "<group>"; };
+		582981712976029200D2B28C /* PatientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewModel.swift; sourceTree = "<group>"; };
 		58390B8729360C2E003AF4C7 /* EIT-Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EIT-Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58390B8A29360C2E003AF4C7 /* EIT_RemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EIT_RemoteApp.swift; sourceTree = "<group>"; };
 		58390B8C29360C2E003AF4C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		58390B8E29360C2F003AF4C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58390B9129360C2F003AF4C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		587ADCDE29E01D7D005EC986 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +66,9 @@
 				582646232950CEAA0008923C /* FirebaseFirestoreSwift in Frameworks */,
 				58264610294E52CB0008923C /* FirebaseDatabase in Frameworks */,
 				58264612294E52CB0008923C /* FirebaseFirestore in Frameworks */,
+				5829816C2975F6CA00D2B28C /* CachedAsyncImage in Frameworks */,
+				582981662975F4C200D2B28C /* SDWebImage in Frameworks */,
+				582981692975F5A700D2B28C /* SDWebImageSwiftUI in Frameworks */,
 				58264609294E4AF90008923C /* SQLite in Frameworks */,
 				5826460E294E52CB0008923C /* FirebaseAuth in Frameworks */,
 				582646252950CEC30008923C /* FirebaseStorage in Frameworks */,
@@ -65,8 +81,13 @@
 		5826461B29509BEC0008923C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5826461C29509C170008923C /* LoginView.swift */,
-				582646292950F2A70008923C /* LoadingView.swift */,
+				582981502969F8D000D2B28C /* Tab.swift */,
+				582981522969FA9F00D2B28C /* SettingsView.swift */,
+				582981542969FB0500D2B28C /* PatientsListView.swift */,
+				582981562969FB1900D2B28C /* ScheduleView.swift */,
+				5829816D2975F8C000D2B28C /* PatientsDetailsView.swift */,
+				5829816F2976016500D2B28C /* PatientsEditView.swift */,
+				587ADCDE29E01D7D005EC986 /* ImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -75,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				5826461F29509CE00008923C /* Color.swift */,
+				58298158296A0DAD00D2B28C /* SplashScreenView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -89,9 +111,19 @@
 		582646262950D25E0008923C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				582646272950D2680008923C /* User.swift */,
+				5829815A296DA82B00D2B28C /* Patients.swift */,
+				5829815F2974B65400D2B28C /* Task.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		582981612975EBD100D2B28C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				582981622975EBE800D2B28C /* PatientsViewModel.swift */,
+				582981712976029200D2B28C /* PatientViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		58390B7E29360C2E003AF4C7 = {
@@ -114,18 +146,15 @@
 		58390B8929360C2E003AF4C7 /* EIT-Remote */ = {
 			isa = PBXGroup;
 			children = (
+				582981612975EBD100D2B28C /* ViewModel */,
 				582646262950D25E0008923C /* Model */,
 				5826461E29509CCD0008923C /* Extension */,
 				5826461B29509BEC0008923C /* View */,
 				58390B8A29360C2E003AF4C7 /* EIT_RemoteApp.swift */,
 				58390B8C29360C2E003AF4C7 /* ContentView.swift */,
-				58264615294E71D60008923C /* ListView.swift */,
-				58264617294E72340008923C /* PatientView.swift */,
-				58264619294E761F0008923C /* DataManager.swift */,
 				58390B8E29360C2F003AF4C7 /* Assets.xcassets */,
 				58264613294E65EA0008923C /* GoogleService-Info.plist */,
 				58390B9029360C2F003AF4C7 /* Preview Content */,
-				5826462B29520AD80008923C /* Model.xcdatamodeld */,
 			);
 			path = "EIT-Remote";
 			sourceTree = "<group>";
@@ -161,6 +190,9 @@
 				58264611294E52CB0008923C /* FirebaseFirestore */,
 				582646222950CEAA0008923C /* FirebaseFirestoreSwift */,
 				582646242950CEC30008923C /* FirebaseStorage */,
+				582981652975F4C200D2B28C /* SDWebImage */,
+				582981682975F5A700D2B28C /* SDWebImageSwiftUI */,
+				5829816B2975F6CA00D2B28C /* CachedAsyncImage */,
 			);
 			productName = "EIT-Remote";
 			productReference = 58390B8729360C2E003AF4C7 /* EIT-Remote.app */;
@@ -193,6 +225,9 @@
 			packageReferences = (
 				58264607294E4AF90008923C /* XCRemoteSwiftPackageReference "SQLite.swift" */,
 				5826460C294E52CB0008923C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				582981642975F4C200D2B28C /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				582981672975F5A700D2B28C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				5829816A2975F6CA00D2B28C /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 58390B8829360C2E003AF4C7 /* Products */;
 			projectDirPath = "";
@@ -221,16 +256,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5826461D29509C170008923C /* LoginView.swift in Sources */,
-				58264618294E72340008923C /* PatientView.swift in Sources */,
+				587ADCDF29E01D7D005EC986 /* ImageView.swift in Sources */,
+				5829815B296DA82B00D2B28C /* Patients.swift in Sources */,
+				582981632975EBE800D2B28C /* PatientsViewModel.swift in Sources */,
+				582981702976016500D2B28C /* PatientsEditView.swift in Sources */,
+				582981532969FA9F00D2B28C /* SettingsView.swift in Sources */,
+				582981602974B65400D2B28C /* Task.swift in Sources */,
 				5826462029509CE00008923C /* Color.swift in Sources */,
-				5826461A294E761F0008923C /* DataManager.swift in Sources */,
-				582646282950D2680008923C /* User.swift in Sources */,
+				582981512969F8D000D2B28C /* Tab.swift in Sources */,
+				582981572969FB1900D2B28C /* ScheduleView.swift in Sources */,
 				58390B8D29360C2E003AF4C7 /* ContentView.swift in Sources */,
+				582981552969FB0500D2B28C /* PatientsListView.swift in Sources */,
+				582981722976029200D2B28C /* PatientViewModel.swift in Sources */,
+				5829816E2975F8C000D2B28C /* PatientsDetailsView.swift in Sources */,
 				58390B8B29360C2E003AF4C7 /* EIT_RemoteApp.swift in Sources */,
-				5826462D29520AD80008923C /* Model.xcdatamodeld in Sources */,
-				58264616294E71D60008923C /* ListView.swift in Sources */,
-				5826462A2950F2A70008923C /* LoadingView.swift in Sources */,
+				58298159296A0DAD00D2B28C /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,10 +402,12 @@
 				DEVELOPMENT_TEAM = L5N89ZQYBM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "EIT Remote";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = c;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -391,10 +433,12 @@
 				DEVELOPMENT_TEAM = L5N89ZQYBM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "EIT Remote";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = c;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,6 +493,30 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		582981642975F4C200D2B28C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		582981672975F5A700D2B28C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		5829816A2975F6CA00D2B28C /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -482,20 +550,22 @@
 			package = 5826460C294E52CB0008923C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
-/* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		5826462B29520AD80008923C /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5826462C29520AD80008923C /* Model.xcdatamodel */,
-			);
-			currentVersion = 5826462C29520AD80008923C /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+		582981652975F4C200D2B28C /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 582981642975F4C200D2B28C /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
-/* End XCVersionGroup section */
+		582981682975F5A700D2B28C /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 582981672975F5A700D2B28C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		5829816B2975F6CA00D2B28C /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5829816A2975F6CA00D2B28C /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58390B7F29360C2E003AF4C7 /* Project object */;
 }
