@@ -15,27 +15,30 @@ struct BMPView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("IP address:")
-                TextField("Enter IP address", text: $ipAddress)
+                Text("IP-адрес:")
+                TextField("Введите IP-адрес", text: $ipAddress)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             HStack {
-                Text("Port number:")
-                TextField("Enter port number", text: $portNumber)
+                Text("Порт:")
+                TextField("Введите номер порта", text: $portNumber)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
-            Button("Connect") {
+            Button("Соединение") {
                 startReceiving()
             }
-            Spacer()
+            Text("")
+            Text("")
+            Text("")
             if let image = UIImage(data: bmpData) {
                 Image(uiImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             } else {
-                Text("No image received yet")
+                Text("Изображение пока не принято")
             }
         }
+        .padding()
     }
     
     private func startReceiving() {

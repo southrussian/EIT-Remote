@@ -30,6 +30,11 @@ struct Tab: View {
                     Image(systemName: "lungs")
                     Text("Картинка")
                 }
+//            ArrayView()
+//                .tabItem {
+//                    Image(systemName: "lungs")
+//                    Text("Картинка")
+//                }
         }
         .accentColor(.mint)
     }

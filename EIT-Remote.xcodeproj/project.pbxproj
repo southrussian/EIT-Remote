@@ -34,6 +34,8 @@
 		58390B8F29360C2F003AF4C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58390B8E29360C2F003AF4C7 /* Assets.xcassets */; };
 		58390B9229360C2F003AF4C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58390B9129360C2F003AF4C7 /* Preview Assets.xcassets */; };
 		587ADCDF29E01D7D005EC986 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587ADCDE29E01D7D005EC986 /* ImageView.swift */; };
+		58E7997F29EDCCF50006BF95 /* ArrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E7997E29EDCCF50006BF95 /* ArrayView.swift */; };
+		58E7998129F1AD160006BF95 /* ImagePDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E7998029F1AD160006BF95 /* ImagePDFView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		58390B8E29360C2F003AF4C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58390B9129360C2F003AF4C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		587ADCDE29E01D7D005EC986 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		58E7997E29EDCCF50006BF95 /* ArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayView.swift; sourceTree = "<group>"; };
+		58E7998029F1AD160006BF95 /* ImagePDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePDFView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 				5829816D2975F8C000D2B28C /* PatientsDetailsView.swift */,
 				5829816F2976016500D2B28C /* PatientsEditView.swift */,
 				587ADCDE29E01D7D005EC986 /* ImageView.swift */,
+				58E7997E29EDCCF50006BF95 /* ArrayView.swift */,
+				58E7998029F1AD160006BF95 /* ImagePDFView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,9 +263,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				587ADCDF29E01D7D005EC986 /* ImageView.swift in Sources */,
+				58E7998129F1AD160006BF95 /* ImagePDFView.swift in Sources */,
 				5829815B296DA82B00D2B28C /* Patients.swift in Sources */,
 				582981632975EBE800D2B28C /* PatientsViewModel.swift in Sources */,
 				582981702976016500D2B28C /* PatientsEditView.swift in Sources */,
+				58E7997F29EDCCF50006BF95 /* ArrayView.swift in Sources */,
 				582981532969FA9F00D2B28C /* SettingsView.swift in Sources */,
 				582981602974B65400D2B28C /* Task.swift in Sources */,
 				5826462029509CE00008923C /* Color.swift in Sources */,
