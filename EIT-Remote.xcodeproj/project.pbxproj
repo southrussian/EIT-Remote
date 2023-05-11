@@ -58,6 +58,7 @@
 		58390B8E29360C2F003AF4C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58390B9129360C2F003AF4C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		587ADCDE29E01D7D005EC986 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		588BDC672A0D31D10065A337 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		58E7997E29EDCCF50006BF95 /* ArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayView.swift; sourceTree = "<group>"; };
 		58E7998029F1AD160006BF95 /* ImagePDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePDFView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +162,7 @@
 				58390B8E29360C2F003AF4C7 /* Assets.xcassets */,
 				58264613294E65EA0008923C /* GoogleService-Info.plist */,
 				58390B9029360C2F003AF4C7 /* Preview Content */,
+				588BDC672A0D31D10065A337 /* README.md */,
 			);
 			path = "EIT-Remote";
 			sourceTree = "<group>";
