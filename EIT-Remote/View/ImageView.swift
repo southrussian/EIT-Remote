@@ -8,63 +8,65 @@ struct BMPView: View {
     @State private var showAlert: Bool = false
 
     var body: some View {
-        VStack {
-            HStack {
-                Text("IP-адрес:")
-                    .foregroundColor(.mint)
-                TextField("Введите IP-адрес", text: $ipAddress)
-//                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 10).fill(Color.mint.opacity(0.1)).frame(height: 30)
-                    )
-                    .padding(.horizontal)
-            }
-            HStack {
-                Text("Порт:")
-                    .foregroundColor(.mint)
-                TextField("Введите номер порта", text: $portNumber)
-//                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 10).fill(Color.mint.opacity(0.1)).frame(height: 30)
-                    )
-                    .padding(.horizontal)
-            }
-            HStack {
-                Button(action: startReceiving) {
-                    Text("Получить изображение")
-                        .frame(width: 250, height: 30)
-                        .background(Color.mint)
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .cornerRadius(10)
+        ScrollView {
+            VStack {
+                HStack {
+                    Text("IP-адрес:")
+                        .foregroundColor(.mint)
+                    TextField("Введите IP-адрес", text: $ipAddress)
+                    //                    .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 10).fill(Color.mint.opacity(0.1)).frame(height: 30)
+                        )
+                        .padding(.horizontal)
+                }
+                HStack {
+                    Text("Порт:")
+                        .foregroundColor(.mint)
+                    TextField("Введите номер порта", text: $portNumber)
+                    //                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 10).fill(Color.mint.opacity(0.1)).frame(height: 30)
+                        )
+                        .padding(.horizontal)
+                }
+                HStack {
+                    Button(action: startReceiving) {
+                        Text("Получить изображение")
+                            .frame(width: 250, height: 30)
+                            .background(Color.mint)
+                            .foregroundColor(.white)
+                            .font(.headline)
+                            .cornerRadius(10)
+                            .padding()
+                    }
+                }
+                .padding(15)
+                
+                Text("")
+                Text("")
+                Text("")
+                if let image = UIImage(data: bmpData) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(15)
+                } else {
+                    Text("Изображение пока не принято")
                 }
             }
-            .padding(15)
-
-            Text("")
-            Text("")
-            Text("")
-            if let image = UIImage(data: bmpData) {
-                Image(uiImage: image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            } else {
-                Text("Изображение пока не принято")
+            .padding()
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("Ошибка подключения"),
+                    message: Text("Неверный IP-адрес или номер порта"),
+                    dismissButton: .default(Text("ОК"))
+                )
             }
         }
-        .padding()
-        .alert(isPresented: $showAlert) {
-            Alert(
-                title: Text("Ошибка подключения"),
-                message: Text("Неверный IP-адрес или номер порта"),
-                dismissButton: .default(Text("ОК"))
-            )
-        }
     }
-
 
 
     private func startReceiving() {
