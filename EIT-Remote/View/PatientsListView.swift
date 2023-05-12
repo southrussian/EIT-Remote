@@ -50,25 +50,60 @@ struct PatientsListView: View {
           }
         }
     
+    @ViewBuilder
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(viewModel.patients) { patient in
-                    patientRowView(patient: patient)
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            VStack {
+                HStack {
+                    Text("Пациенты")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(Color.theme.accent)
+                    Spacer()
+                    Button {
+                        self.presentAddPatientSheet.toggle()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+                .padding()
+                    List {
+                        ForEach(viewModel.patients) { patient in
+                            patientRowView(patient: patient)
+                        }
+                    }
+                    .listStyle(.insetGrouped)
+                    .onAppear() {
+                              print("PatientsListView appears. Subscribing to data updates.")
+                              self.viewModel.subscribe()
+                            }
+                    .sheet(isPresented: self.$presentAddPatientSheet) {
+                        PatientsEditView()
+                        
+                    }
+
+            }
+        } else {
+            NavigationView {
+                List {
+                    ForEach(viewModel.patients) { patient in
+                        patientRowView(patient: patient)
+                    }
+                }
+                .listStyle(.insetGrouped)
+                .navigationBarTitle("Пациенты")
+                .navigationBarItems(trailing: addButton)
+                .onAppear() {
+                          print("PatientsListView appears. Subscribing to data updates.")
+                          self.viewModel.subscribe()
+                        }
+                .sheet(isPresented: self.$presentAddPatientSheet) {
+                    PatientsEditView()
+                    
                 }
             }
-            .listStyle(.insetGrouped)
-            .navigationBarTitle("Пациенты")
-            .navigationBarItems(trailing: addButton)
-            .onAppear() {
-                      print("PatientsListView appears. Subscribing to data updates.")
-                      self.viewModel.subscribe()
-                    }
-            .sheet(isPresented: self.$presentAddPatientSheet) {
-                PatientsEditView()
-                
-            }
         }
+        
         
     }
 }
