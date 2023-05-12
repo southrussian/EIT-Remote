@@ -6,6 +6,7 @@ struct BMPView: View {
     @State private var ipAddress: String = ""
     @State private var portNumber: String = ""
     @State private var showAlert: Bool = false
+//    @State private var scale: CGFloat = 1.0
 
     var body: some View {
         ScrollView {
@@ -53,6 +54,13 @@ struct BMPView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .cornerRadius(15)
+//                        .gesture(
+//                                        MagnificationGesture()
+//                                            .onChanged { value in
+//                                                scale = value.magnitude
+//                                            }
+//                                    )
+//                                    .scaleEffect(scale)
                 } else {
                     Text("Изображение пока не принято")
                 }

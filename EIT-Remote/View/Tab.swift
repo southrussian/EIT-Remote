@@ -30,6 +30,11 @@ struct Tab: View {
                     Image(systemName: "lungs")
                     Text("Картинка")
                 }
+            AnotherBMPView()
+                .tabItem {
+                    Image(systemName: "lungs")
+                    Text("Картинка 2")
+                }
 //            ArrayView()
 //                .tabItem {
 //                    Image(systemName: "lungs")
