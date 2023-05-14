@@ -30,10 +30,10 @@ struct Tab: View {
                     Image(systemName: "lungs")
                     Text("Картинка")
                 }
-            AnotherBMPView()
+            StreamView()
                 .tabItem {
                     Image(systemName: "lungs")
-                    Text("Картинка 2")
+                    Text("Трансляция")
                 }
 //            ArrayView()
 //                .tabItem {

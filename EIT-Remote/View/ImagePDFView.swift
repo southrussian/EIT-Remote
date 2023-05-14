@@ -1,7 +1,7 @@
 import SwiftUI
 import Foundation
 
-struct AnotherBMPView: View {
+struct StreamView: View {
     @State private var bmpData: Data = Data()
     @State private var ipAddress: String = ""
     @State private var portNumber: String = ""
@@ -14,10 +14,18 @@ struct AnotherBMPView: View {
         ScrollView {
             VStack {
                 HStack {
+                    Text("Трансляция")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(Color.theme.accent)
+                    Spacer()
+                    Text("")
+                }
+                .padding(.horizontal)
+                HStack {
                     Text("IP-адрес:")
                         .foregroundColor(.mint)
                     TextField("Введите IP-адрес", text: $ipAddress)
-                    //                    .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
                         .background(
                             RoundedRectangle(cornerRadius: 10).fill(Color.mint.opacity(0.1)).frame(height: 30)
@@ -28,7 +36,6 @@ struct AnotherBMPView: View {
                     Text("Порт:")
                         .foregroundColor(.mint)
                     TextField("Введите номер порта", text: $portNumber)
-                    //                    .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
                         .background(
                             RoundedRectangle(cornerRadius: 10).fill(Color.mint.opacity(0.1)).frame(height: 30)
@@ -36,18 +43,6 @@ struct AnotherBMPView: View {
                         .padding(.horizontal)
                 }
                 VStack {
-//                    Button(action: {
-//                        self.startReceiving()
-//                    }) {
-//                        Text("Получить изображение")
-//                            .frame(width: 250, height: 30)
-//                            .background(Color.mint)
-//                            .foregroundColor(.white)
-//                            .font(.headline)
-//                            .cornerRadius(10)
-//                            .padding()
-//                    }
-                                
                     Button(action: {
                                 if isReceiving {
                                     stopReceiving()
@@ -57,7 +52,7 @@ struct AnotherBMPView: View {
                             }) {
                                 Text(isReceiving ? "Остановить получение" : "Получить изображение")
                                     .frame(width: 250, height: 30)
-                                    .background(Color.mint)
+                                    .background(isReceiving ? .red : .mint)
                                     .foregroundColor(.white)
                                     .font(.headline)
                                     .cornerRadius(10)
@@ -77,13 +72,6 @@ struct AnotherBMPView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .cornerRadius(15)
-//                        .gesture(
-//                                        MagnificationGesture()
-//                                            .onChanged { value in
-//                                                scale = value.magnitude
-//                                            }
-//                                    )
-//                                    .scaleEffect(scale)
                 } else {
                     Text("Изображение пока не принято")
                 }
@@ -98,85 +86,6 @@ struct AnotherBMPView: View {
             }
         }
     }
-
-
-//    private func startReceiving() {
-//        guard let serverAddress = ipAddress as CFString?, let port = UInt32(portNumber) else {
-//            print("Invalid server address or port")
-//            showAlert = true
-//            return
-//        }
-//
-//        isButtonPressed.toggle()
-//
-//        var inputStream: InputStream?
-//        var outputStream: OutputStream?
-//
-//        Stream.getStreamsToHost(withName: serverAddress as String, port: Int(port), inputStream: &inputStream, outputStream: &outputStream)
-//
-//        guard let stream = inputStream else {
-//            print("Failed to create stream")
-//            return
-//        }
-//
-//        stream.open()
-//        let data = Data([1])
-//        outputStream?.open()
-//        let bytesWritten = outputStream?.write([UInt8](data), maxLength: 4)
-//
-//        if bytesWritten == -1 {
-//            print("Error sending data")
-//        } else {
-//            print("Data sent successfully")
-//        }
-//
-//        var isFirst = true
-//        var headerData = Data()
-//        var bytesReadTotal = 0
-//        var buff = [UInt8](repeating: 0, count: 4)
-//
-//        let _ = stream.read(&buff, maxLength: buff.count)
-//        let _ = Int(buff[0])
-//        var bmp: Data = Data()
-//            //print(size)
-//        while true {
-//            var buffer = [UInt8](repeating: 0, count: 49214)
-//
-//            let bytesRead = stream.read(&buffer, maxLength: buffer.count)
-//            print(buffer)
-//
-//            if bytesRead > 0 {
-//                bytesReadTotal += bytesRead
-//                print(bytesReadTotal)
-//                if isFirst {
-//                    headerData.append(contentsOf: buffer[8..<62])
-//                    bmp.append(contentsOf: buffer[62..<bytesRead])
-//                    isFirst = false
-//                } else {
-//                    bmp.append(contentsOf: buffer[0..<bytesRead])
-//                }
-//
-//                if isFirst == false && bytesReadTotal == 49214{
-//                        // The first image has been fully received
-//                        // Check if header is valid BMP header
-//                    if headerData.count == 54 && headerData[0] == 0x42 && headerData[1] == 0x4D {
-//                        print(headerData.count)
-//                            // BMP header is valid, create UIImage
-//                            //DispatchQueue.main.async {
-//                        self.bmpData.removeAll()
-//                            self.bmpData = headerData + bmp[0...] // Remove header from data
-//                            print(self.bmpData)
-//                            //}
-//                            return
-//                            //}
-//                        }
-//                    }
-//                } else {
-//                    print("Stream closed")
-//                    return
-//                }
-//            }
-//        }
     private func startReceiving() {
             isReceiving = true
             timer = Timer.scheduledTimer(withTimeInterval: 0.4, repeats: true) { _ in

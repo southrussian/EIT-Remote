@@ -12,6 +12,16 @@ struct BMPView: View {
         ScrollView {
             VStack {
                 HStack {
+                    Text("Картинка")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(Color.theme.accent)
+                    Spacer()
+                    Text("")
+                }
+                .padding(.horizontal)
+                
+                HStack {
                     Text("IP-адрес:")
                         .foregroundColor(.mint)
                     TextField("Введите IP-адрес", text: $ipAddress)
