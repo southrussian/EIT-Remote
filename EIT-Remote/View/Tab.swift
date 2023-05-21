@@ -25,21 +25,21 @@ struct Tab: View {
                     Image(systemName: "gear")
                     Text("Настройки")
                 }
-            BMPView()
-                .tabItem {
-                    Image(systemName: "lungs")
-                    Text("Картинка")
-                }
+//            BMPView()
+//                .tabItem {
+//                    Image(systemName: "lungs")
+//                    Text("Картинка")
+//                }
             StreamView()
                 .tabItem {
                     Image(systemName: "lungs")
                     Text("Трансляция")
                 }
-//            ArrayView()
-//                .tabItem {
-//                    Image(systemName: "lungs")
-//                    Text("Картинка")
-//                }
+            VentilationView()
+                .tabItem {
+                    Image(systemName: "function")
+                    Text("Вентиляция")
+                }
         }
         .accentColor(.mint)
     }

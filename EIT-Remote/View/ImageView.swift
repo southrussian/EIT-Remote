@@ -111,6 +111,7 @@ struct BMPView: View {
             
         if bytesWritten == -1 {
             print("Error sending data")
+            return
         } else {
             print("Data sent successfully")
         }
