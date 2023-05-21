@@ -75,9 +75,9 @@ struct VentilationView: View {
                     let vr = 100 - vl
                     HStack {
                         Text("VL (%): \(vl.clean)")
-                            .padding(.horizontal, 3)
+                            .padding(.horizontal)
                         Text("VR (%): \(vr.clean)")
-                            .padding()
+                            .padding(.horizontal)
 //                        Text("R/L: \((vr/vl * 100.0).clean)")
 //                            .padding()
                     }
