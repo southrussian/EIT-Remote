@@ -30,14 +30,14 @@ struct Tab: View {
 //                    Image(systemName: "lungs")
 //                    Text("Картинка")
 //                }
-            StreamView()
-                .tabItem {
-                    Image(systemName: "lungs")
-                    Text("Трансляция")
-                }
+//            StreamView()
+//                .tabItem {
+//                    Image(systemName: "lungs")
+//                    Text("Трансляция")
+//                }
             VentilationView()
                 .tabItem {
-                    Image(systemName: "function")
+                    Image(systemName: "lungs")
                     Text("Вентиляция")
                 }
         }

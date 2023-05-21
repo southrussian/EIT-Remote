@@ -45,21 +45,6 @@ struct VentilationView: View {
                         .padding(.horizontal)
                 }
                 
-                if vlData.count >= 2, fhData.count >= 2 {
-                    let vlValue = vlData.withUnsafeBytes { $0.load(as: UInt16.self) }
-                    let fhValue = fhData.withUnsafeBytes { $0.load(as: UInt16.self) }
-                    HStack {
-                        Text("VL (%): \((Float(vlValue) / 10.0).clean)")
-                            .padding()
-                        Text("VR (%): \((100 - (Float(vlValue) / 10.0)).clean)")
-                            .padding()
-                    }
-                    
-                } else {
-                    Text("Данные вентиляции пока не приняты")
-                        .padding()
-                }
-                
 
                 VStack {
                     Button(action: {
@@ -82,6 +67,25 @@ struct VentilationView: View {
 //                            }
                 }
                 .padding(15)
+                
+                if vlData.count >= 2, fhData.count >= 2 {
+                    let vlValue = vlData.withUnsafeBytes { $0.load(as: UInt16.self) }
+                    let _ = fhData.withUnsafeBytes { $0.load(as: UInt16.self) }
+                    let vl = Float(vlValue) / 10.0
+                    let vr = 100 - vl
+                    HStack {
+                        Text("VL (%): \(vl.clean)")
+                            .padding(.horizontal, 3)
+                        Text("VR (%): \(vr.clean)")
+                            .padding()
+//                        Text("R/L: \((vr/vl * 100.0).clean)")
+//                            .padding()
+                    }
+                    
+                } else {
+                    Text("Данные вентиляции пока не приняты")
+                        .padding()
+                }
                 
                 Text("")
                 Text("")
@@ -123,7 +127,7 @@ struct VentilationView: View {
 
     
     private func startReceiving() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.4, repeats: true) { _ in
                 // Вызов функции startReceiving
             receiveImage()
         }
