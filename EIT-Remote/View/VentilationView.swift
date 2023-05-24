@@ -77,13 +77,13 @@ struct VentilationView: View {
                         Text("VL (%): \(vl.clean)")
                             .padding(.horizontal)
                         Text("VR (%): \(vr.clean)")
-                            .padding(.horizontal)
+                            .padding()
 //                        Text("R/L: \((vr/vl * 100.0).clean)")
 //                            .padding()
                     }
                     
                 } else {
-                    Text("Данные вентиляции пока не приняты")
+                    Text("VL (%): н/д       VR (%): н/д")
                         .padding()
                 }
                 

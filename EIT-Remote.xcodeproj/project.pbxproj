@@ -37,8 +37,19 @@
 		588BDC6A2A1506830065A337 /* ImageStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC692A1506830065A337 /* ImageStreamView.swift */; };
 		588BDC6C2A1942EA0065A337 /* VentilationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC6B2A1942E90065A337 /* VentilationView.swift */; };
 		588BDC6F2A1A72600065A337 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 588BDC6E2A1A72600065A337 /* SwiftUICharts */; };
-		58E7997F29EDCCF50006BF95 /* ArrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E7997E29EDCCF50006BF95 /* ArrayView.swift */; };
-		58E7998129F1AD160006BF95 /* ImagePDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E7998029F1AD160006BF95 /* ImagePDFView.swift */; };
+		588BDC712A1E95C20065A337 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC702A1E95C20065A337 /* NewTaskView.swift */; };
+		588BDC732A1E95E90065A337 /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC722A1E95E90065A337 /* TaskItemView.swift */; };
+		588BDC752A1E96370065A337 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC742A1E96370065A337 /* User.swift */; };
+		588BDC772A1E96710065A337 /* SettingsViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC762A1E96710065A337 /* SettingsViewModel .swift */; };
+		588BDC792A1E9AA70065A337 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC782A1E9AA70065A337 /* ContentViewModel.swift */; };
+		588BDC7B2A1E9ADF0065A337 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC7A2A1E9ADF0065A337 /* ScheduleViewModel.swift */; };
+		588BDC7D2A1E9B520065A337 /* NewTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC7C2A1E9B520065A337 /* NewTaskViewModel.swift */; };
+		588BDC7F2A1E9C0D0065A337 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC7E2A1E9C0D0065A337 /* SignInView.swift */; };
+		588BDC812A1E9C1C0065A337 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC802A1E9C1C0065A337 /* SignUpView.swift */; };
+		588BDC832A1E9C3A0065A337 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC822A1E9C3A0065A337 /* SignInViewModel.swift */; };
+		588BDC852A1E9C4B0065A337 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC842A1E9C4B0065A337 /* SignUpViewModel.swift */; };
+		588BDC872A1E9C7F0065A337 /* TaskItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC862A1E9C7F0065A337 /* TaskItemViewModel.swift */; };
+		588BDC892A1E9D400065A337 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC882A1E9D400065A337 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,8 +75,19 @@
 		588BDC682A0E4E410065A337 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		588BDC692A1506830065A337 /* ImageStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStreamView.swift; sourceTree = "<group>"; };
 		588BDC6B2A1942E90065A337 /* VentilationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentilationView.swift; sourceTree = "<group>"; };
-		58E7997E29EDCCF50006BF95 /* ArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayView.swift; sourceTree = "<group>"; };
-		58E7998029F1AD160006BF95 /* ImagePDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePDFView.swift; sourceTree = "<group>"; };
+		588BDC702A1E95C20065A337 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
+		588BDC722A1E95E90065A337 /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
+		588BDC742A1E96370065A337 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		588BDC762A1E96710065A337 /* SettingsViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewModel .swift"; sourceTree = "<group>"; };
+		588BDC782A1E9AA70065A337 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		588BDC7A2A1E9ADF0065A337 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		588BDC7C2A1E9B520065A337 /* NewTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewModel.swift; sourceTree = "<group>"; };
+		588BDC7E2A1E9C0D0065A337 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		588BDC802A1E9C1C0065A337 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		588BDC822A1E9C3A0065A337 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		588BDC842A1E9C4B0065A337 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		588BDC862A1E9C7F0065A337 /* TaskItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemViewModel.swift; sourceTree = "<group>"; };
+		588BDC882A1E9D400065A337 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +121,13 @@
 				5829816D2975F8C000D2B28C /* PatientsDetailsView.swift */,
 				5829816F2976016500D2B28C /* PatientsEditView.swift */,
 				587ADCDE29E01D7D005EC986 /* ImageView.swift */,
-				58E7997E29EDCCF50006BF95 /* ArrayView.swift */,
-				58E7998029F1AD160006BF95 /* ImagePDFView.swift */,
 				588BDC692A1506830065A337 /* ImageStreamView.swift */,
 				588BDC6B2A1942E90065A337 /* VentilationView.swift */,
+				588BDC702A1E95C20065A337 /* NewTaskView.swift */,
+				588BDC722A1E95E90065A337 /* TaskItemView.swift */,
+				588BDC7E2A1E9C0D0065A337 /* SignInView.swift */,
+				588BDC802A1E9C1C0065A337 /* SignUpView.swift */,
+				588BDC882A1E9D400065A337 /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,6 +153,7 @@
 			children = (
 				5829815A296DA82B00D2B28C /* Patients.swift */,
 				5829815F2974B65400D2B28C /* Task.swift */,
+				588BDC742A1E96370065A337 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +163,13 @@
 			children = (
 				582981622975EBE800D2B28C /* PatientsViewModel.swift */,
 				582981712976029200D2B28C /* PatientViewModel.swift */,
+				588BDC762A1E96710065A337 /* SettingsViewModel .swift */,
+				588BDC782A1E9AA70065A337 /* ContentViewModel.swift */,
+				588BDC7A2A1E9ADF0065A337 /* ScheduleViewModel.swift */,
+				588BDC7C2A1E9B520065A337 /* NewTaskViewModel.swift */,
+				588BDC822A1E9C3A0065A337 /* SignInViewModel.swift */,
+				588BDC842A1E9C4B0065A337 /* SignUpViewModel.swift */,
+				588BDC862A1E9C7F0065A337 /* TaskItemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -275,22 +308,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				587ADCDF29E01D7D005EC986 /* ImageView.swift in Sources */,
-				58E7998129F1AD160006BF95 /* ImagePDFView.swift in Sources */,
+				588BDC7B2A1E9ADF0065A337 /* ScheduleViewModel.swift in Sources */,
+				588BDC7D2A1E9B520065A337 /* NewTaskViewModel.swift in Sources */,
 				5829815B296DA82B00D2B28C /* Patients.swift in Sources */,
+				588BDC712A1E95C20065A337 /* NewTaskView.swift in Sources */,
 				582981632975EBE800D2B28C /* PatientsViewModel.swift in Sources */,
+				588BDC852A1E9C4B0065A337 /* SignUpViewModel.swift in Sources */,
 				582981702976016500D2B28C /* PatientsEditView.swift in Sources */,
-				58E7997F29EDCCF50006BF95 /* ArrayView.swift in Sources */,
 				582981532969FA9F00D2B28C /* SettingsView.swift in Sources */,
+				588BDC812A1E9C1C0065A337 /* SignUpView.swift in Sources */,
 				582981602974B65400D2B28C /* Task.swift in Sources */,
+				588BDC7F2A1E9C0D0065A337 /* SignInView.swift in Sources */,
 				5826462029509CE00008923C /* Color.swift in Sources */,
+				588BDC892A1E9D400065A337 /* MainView.swift in Sources */,
+				588BDC752A1E96370065A337 /* User.swift in Sources */,
 				582981512969F8D000D2B28C /* Tab.swift in Sources */,
 				582981572969FB1900D2B28C /* ScheduleView.swift in Sources */,
+				588BDC772A1E96710065A337 /* SettingsViewModel .swift in Sources */,
 				58390B8D29360C2E003AF4C7 /* ContentView.swift in Sources */,
 				588BDC6C2A1942EA0065A337 /* VentilationView.swift in Sources */,
 				588BDC6A2A1506830065A337 /* ImageStreamView.swift in Sources */,
 				582981552969FB0500D2B28C /* PatientsListView.swift in Sources */,
 				582981722976029200D2B28C /* PatientViewModel.swift in Sources */,
 				5829816E2975F8C000D2B28C /* PatientsDetailsView.swift in Sources */,
+				588BDC792A1E9AA70065A337 /* ContentViewModel.swift in Sources */,
+				588BDC832A1E9C3A0065A337 /* SignInViewModel.swift in Sources */,
+				588BDC732A1E95E90065A337 /* TaskItemView.swift in Sources */,
+				588BDC872A1E9C7F0065A337 /* TaskItemViewModel.swift in Sources */,
 				58390B8B29360C2E003AF4C7 /* EIT_RemoteApp.swift in Sources */,
 				58298159296A0DAD00D2B28C /* SplashScreenView.swift in Sources */,
 			);
