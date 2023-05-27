@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct User {
+    var email: String
+    var password: String
+    
+    // Дополнительные свойства пользователя
+    
+    init(email: String, password: String) {
+        self.email = email
+        self.password = password
+    }
+}

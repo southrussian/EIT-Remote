@@ -41,7 +41,7 @@
 		588BDC732A1E95E90065A337 /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC722A1E95E90065A337 /* TaskItemView.swift */; };
 		588BDC752A1E96370065A337 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC742A1E96370065A337 /* User.swift */; };
 		588BDC772A1E96710065A337 /* SettingsViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC762A1E96710065A337 /* SettingsViewModel .swift */; };
-		588BDC792A1E9AA70065A337 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC782A1E9AA70065A337 /* ContentViewModel.swift */; };
+		588BDC792A1E9AA70065A337 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC782A1E9AA70065A337 /* MainViewModel.swift */; };
 		588BDC7B2A1E9ADF0065A337 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC7A2A1E9ADF0065A337 /* ScheduleViewModel.swift */; };
 		588BDC7D2A1E9B520065A337 /* NewTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC7C2A1E9B520065A337 /* NewTaskViewModel.swift */; };
 		588BDC7F2A1E9C0D0065A337 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC7E2A1E9C0D0065A337 /* SignInView.swift */; };
@@ -50,6 +50,8 @@
 		588BDC852A1E9C4B0065A337 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC842A1E9C4B0065A337 /* SignUpViewModel.swift */; };
 		588BDC872A1E9C7F0065A337 /* TaskItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC862A1E9C7F0065A337 /* TaskItemViewModel.swift */; };
 		588BDC892A1E9D400065A337 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC882A1E9D400065A337 /* MainView.swift */; };
+		588BDC8B2A213EE70065A337 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC8A2A213EE70065A337 /* Encodable.swift */; };
+		588BDC8D2A214DF40065A337 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BDC8C2A214DF40065A337 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +81,7 @@
 		588BDC722A1E95E90065A337 /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
 		588BDC742A1E96370065A337 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		588BDC762A1E96710065A337 /* SettingsViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewModel .swift"; sourceTree = "<group>"; };
-		588BDC782A1E9AA70065A337 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		588BDC782A1E9AA70065A337 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		588BDC7A2A1E9ADF0065A337 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		588BDC7C2A1E9B520065A337 /* NewTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewModel.swift; sourceTree = "<group>"; };
 		588BDC7E2A1E9C0D0065A337 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,8 @@
 		588BDC842A1E9C4B0065A337 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		588BDC862A1E9C7F0065A337 /* TaskItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemViewModel.swift; sourceTree = "<group>"; };
 		588BDC882A1E9D400065A337 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		588BDC8A2A213EE70065A337 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		588BDC8C2A214DF40065A337 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 			children = (
 				5826461F29509CE00008923C /* Color.swift */,
 				58298158296A0DAD00D2B28C /* SplashScreenView.swift */,
+				588BDC8A2A213EE70065A337 /* Encodable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -164,12 +169,13 @@
 				582981622975EBE800D2B28C /* PatientsViewModel.swift */,
 				582981712976029200D2B28C /* PatientViewModel.swift */,
 				588BDC762A1E96710065A337 /* SettingsViewModel .swift */,
-				588BDC782A1E9AA70065A337 /* ContentViewModel.swift */,
+				588BDC782A1E9AA70065A337 /* MainViewModel.swift */,
 				588BDC7A2A1E9ADF0065A337 /* ScheduleViewModel.swift */,
 				588BDC7C2A1E9B520065A337 /* NewTaskViewModel.swift */,
 				588BDC822A1E9C3A0065A337 /* SignInViewModel.swift */,
 				588BDC842A1E9C4B0065A337 /* SignUpViewModel.swift */,
 				588BDC862A1E9C7F0065A337 /* TaskItemViewModel.swift */,
+				588BDC8C2A214DF40065A337 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -311,6 +317,7 @@
 				588BDC7B2A1E9ADF0065A337 /* ScheduleViewModel.swift in Sources */,
 				588BDC7D2A1E9B520065A337 /* NewTaskViewModel.swift in Sources */,
 				5829815B296DA82B00D2B28C /* Patients.swift in Sources */,
+				588BDC8B2A213EE70065A337 /* Encodable.swift in Sources */,
 				588BDC712A1E95C20065A337 /* NewTaskView.swift in Sources */,
 				582981632975EBE800D2B28C /* PatientsViewModel.swift in Sources */,
 				588BDC852A1E9C4B0065A337 /* SignUpViewModel.swift in Sources */,
@@ -331,7 +338,8 @@
 				582981552969FB0500D2B28C /* PatientsListView.swift in Sources */,
 				582981722976029200D2B28C /* PatientViewModel.swift in Sources */,
 				5829816E2975F8C000D2B28C /* PatientsDetailsView.swift in Sources */,
-				588BDC792A1E9AA70065A337 /* ContentViewModel.swift in Sources */,
+				588BDC8D2A214DF40065A337 /* UserViewModel.swift in Sources */,
+				588BDC792A1E9AA70065A337 /* MainViewModel.swift in Sources */,
 				588BDC832A1E9C3A0065A337 /* SignInViewModel.swift in Sources */,
 				588BDC732A1E95E90065A337 /* TaskItemView.swift in Sources */,
 				588BDC872A1E9C7F0065A337 /* TaskItemViewModel.swift in Sources */,

@@ -3,6 +3,7 @@ import Foundation
 
 
 struct VentilationView: View {
+    @Environment(\.presentationMode) var presentationMode
     @State private var bmpData: Data = Data()
     @State private var vlData: Data = Data()
     @State private var fhData: Data = Data()
@@ -11,39 +12,49 @@ struct VentilationView: View {
     @State private var showAlert: Bool = false
     @State private var isReceiving = false
     @State private var timer: Timer?
+    
+    var patient: Patient
 
     var body: some View {
         ScrollView {
             VStack {
                 HStack {
-                    Text("Вентиляция")
+                    Text("Вентиляция: \(patient.name) \(patient.surname)")
                         .font(.title)
                         .bold()
                         .foregroundColor(Color.theme.accent)
                     Spacer()
                     Text("")
                 }
+                .offset(y: -30)
                 .padding(.horizontal)
-                HStack {
+                HStack(spacing: 10) {
                     Text("IP-адрес:")
                         .foregroundColor(.mint)
-                    TextField("Введите IP-адрес", text: $ipAddress)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 10).fill(Color.mint.opacity(0.1)).frame(height: 30)
-                        )
-                        .padding(.horizontal)
+                    Spacer()
+                    Text(patient.ipAddress ?? "")
+//                    TextField("Введите IP-адрес", text: $ipAddress)
+//                        .padding()
+//                        .background(
+//                            RoundedRectangle(cornerRadius: 10).fill(Color.mint.opacity(0.1)).frame(height: 30)
+//                        )
+//                        .padding(.horizontal)
                 }
-                HStack {
+                .padding(.horizontal)
+                HStack(spacing: 10)
+                {
                     Text("Порт:")
                         .foregroundColor(.mint)
-                    TextField("Введите номер порта", text: $portNumber)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 10).fill(Color.mint.opacity(0.1)).frame(height: 30)
-                        )
-                        .padding(.horizontal)
+                    Spacer()
+                    Text(patient.port ?? "")
+//                    TextField("Введите номер порта", text: $portNumber)
+//                        .padding()
+//                        .background(
+//                            RoundedRectangle(cornerRadius: 10).fill(Color.mint.opacity(0.1)).frame(height: 30)
+//                        )
+//                        .padding(.horizontal)
                 }
+                .padding(.horizontal)
                 
 
                 VStack {
@@ -141,7 +152,12 @@ struct VentilationView: View {
 
     private func receiveImage() {
         isReceiving = true
-        guard let serverAddress = ipAddress as CFString?, let port = UInt32(portNumber) else {
+//        guard let serverAddress = ipAddress as CFString?, let port = UInt32(portNumber) else {
+//            print("Invalid server address or port")
+//            showAlert = true
+//            return
+//        }
+        guard let serverAddress = patient.ipAddress as CFString?, let port = UInt32(patient.port ?? "") else {
             print("Invalid server address or port")
             showAlert = true
             return

@@ -11,7 +11,7 @@ struct SplashScreenView: View {
     @State private var isActive = false
     var body: some View {
         if isActive {
-            MainView()
+            ContentView()
         } else {
             ZStack {
                 VStack {

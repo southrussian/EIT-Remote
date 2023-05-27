@@ -121,7 +121,7 @@ struct PatientsEditView: View {
  
 struct BookEditView_Previews: PreviewProvider {
   static var previews: some View {
-    let patient = Patient(name: "Danil", surname: "Peregorodiev", patronym: "Eugene", dateOfBirth: "02.08.2001", gender: "male", address: "Moscow, Russia", snils: "123456789", polis: "123456789", passportSerie: "0721", passportNumber: "809943", familyState: "Not marriged", education: "High", jobStatus: "Employeed", jobPlace: "SRSPU", illnesses: "Schizophrenia", diagnosis: "Schizophrenia", image: "https://photos5.appleinsider.com/gallery/product_pages/139-hero.jpg", device: nil)
+    let patient = Patient(name: "Danil", surname: "Peregorodiev", patronym: "Eugene", dateOfBirth: "02.08.2001", gender: "male", address: "Moscow, Russia", snils: "123456789", polis: "123456789", passportSerie: "0721", passportNumber: "809943", familyState: "Not marriged", education: "High", jobStatus: "Employeed", jobPlace: "SRSPU", illnesses: "Schizophrenia", diagnosis: "Schizophrenia", image: "https://photos5.appleinsider.com/gallery/product_pages/139-hero.jpg", ipAddress: "192.168.0.14", port: "4322")
     let patientViewModel = PatientViewModel(patient: patient)
     return PatientsEditView(viewModel: patientViewModel, mode: .edit)
   }

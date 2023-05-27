@@ -28,7 +28,8 @@ struct Patient: Identifiable, Codable {
     var illnesses: String
     var diagnosis: String
     var image: String
-    var device: String?
+    var ipAddress: String?
+    var port: String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -49,7 +50,8 @@ struct Patient: Identifiable, Codable {
         case illnesses
         case diagnosis
         case image
-        case device
+        case ipAddress
+        case port
     }
 }
 

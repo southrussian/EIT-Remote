@@ -18,7 +18,7 @@ struct PatientsDetailsView: View {
    
   private func editButton(action: @escaping () -> Void) -> some View {
     Button(action: { action() }) {
-      Text("Edit")
+      Text("Изменить")
     }
   }
    
@@ -115,9 +115,14 @@ struct PatientsDetailsView: View {
                 Text(patient.diagnosis)
             }
             HStack {
-                Text("Устройство ЭИТ:")
+                Text("IP-адрес ЭИТ:")
                 Spacer()
-                Text(patient.device ?? "")
+                Text(patient.ipAddress ?? "")
+            }
+            HStack {
+                Text("Порт ЭИТ:")
+                Spacer()
+                Text(patient.port ?? "")
             }
         }
         
@@ -137,6 +142,10 @@ struct PatientsDetailsView: View {
               }
           }
       }
+        NavigationLink(destination: VentilationView(patient: patient)) {
+            Text("Просмотр визуализации")
+                .foregroundColor(Color.theme.accent)
+        }
     }
     .navigationBarTitle("\(patient.name) \(patient.surname)")
     .navigationBarItems(trailing: editButton {
@@ -161,7 +170,7 @@ struct PatientsDetailsView: View {
  
 struct PatientsDetailsView_Previews: PreviewProvider {
   static var previews: some View {
-    let patient = Patient(name: "Danil", surname: "Peregorodiev", patronym: "Eugene", dateOfBirth: "02.08.2001", gender: "male", address: "Moscow, Russia", snils: "123456789", polis: "123456789", passportSerie: "0721", passportNumber: "809943", familyState: "Not marriged", education: "High", jobStatus: "Employeed", jobPlace: "SRSPU", illnesses: "Schizophrenia", diagnosis: "Schizophrenia", image: "https://photos5.appleinsider.com/gallery/product_pages/139-hero.jpg", device: nil)
+    let patient = Patient(name: "Danil", surname: "Peregorodiev", patronym: "Eugene", dateOfBirth: "02.08.2001", gender: "male", address: "Moscow, Russia", snils: "123456789", polis: "123456789", passportSerie: "0721", passportNumber: "809943", familyState: "Not marriged", education: "High", jobStatus: "Employeed", jobPlace: "SRSPU", illnesses: "Schizophrenia", diagnosis: "Schizophrenia", image: "https://photos5.appleinsider.com/gallery/product_pages/139-hero.jpg", ipAddress: "192.168.0.14", port: "4322")
     return
       NavigationView {
         PatientsDetailsView(patient: patient)

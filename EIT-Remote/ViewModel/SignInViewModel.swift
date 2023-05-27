@@ -15,7 +15,7 @@ class SignInViewModel: ObservableObject {
     
     init() {}
     
-    func validate() -> Bool {
+    private func validate() -> Bool {
         message = ""
         guard !email.trimmingCharacters(in: .whitespaces).isEmpty,
             !pass.trimmingCharacters(in: .whitespaces).isEmpty else {

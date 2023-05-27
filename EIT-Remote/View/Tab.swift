@@ -35,11 +35,11 @@ struct Tab: View {
 //                    Image(systemName: "lungs")
 //                    Text("Трансляция")
 //                }
-            VentilationView()
-                .tabItem {
-                    Image(systemName: "lungs")
-                    Text("Вентиляция")
-                }
+//            VentilationView(patient: <#T##Patient#>)
+//                .tabItem {
+//                    Image(systemName: "lungs")
+//                    Text("Вентиляция")
+//                }
         }
         .accentColor(.mint)
     }

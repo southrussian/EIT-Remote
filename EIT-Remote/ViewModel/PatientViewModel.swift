@@ -16,7 +16,7 @@ class PatientViewModel: ObservableObject {
    
   private var cancellables = Set<AnyCancellable>()
    
-    init(patient: Patient = Patient(name: "", surname: "", patronym: "", dateOfBirth: "", gender: "", address: "", snils: "", polis: "", passportSerie: "", passportNumber: "", familyState: "", education: "", jobStatus: "", jobPlace: "", illnesses: "", diagnosis: "", image: "", device: "")) {
+    init(patient: Patient = Patient(name: "", surname: "", patronym: "", dateOfBirth: "", gender: "", address: "", snils: "", polis: "", passportSerie: "", passportNumber: "", familyState: "", education: "", jobStatus: "", jobPlace: "", illnesses: "", diagnosis: "", image: "", ipAddress: "", port: "")) {
     self.patient = patient
      
     self.$patient
@@ -41,7 +41,7 @@ class PatientViewModel: ObservableObject {
   private func updatePatient(_ patient: Patient) {
     if let documentId = patient.id {
       do {
-        try db.collection("patient").document(documentId).setData(from: patient)
+        try db.collection("patients").document(documentId).setData(from: patient)
       }
       catch {
         print(error)

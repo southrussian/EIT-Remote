@@ -12,6 +12,7 @@ import FirebaseAuth
 struct ContentView: View {
 
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
+    @EnvironmentObject var viewModel: UserViewModel
 
     var body: some View {
         VStack{
@@ -42,6 +43,8 @@ struct SignIn : View {
     @State var message = ""
     @State var alert = false
     @State var show = false
+    @EnvironmentObject var viewModel: UserViewModel
+
 
     var body : some View{
         ZStack {
@@ -97,6 +100,7 @@ struct SignIn : View {
                                 NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
                             }
                         }
+
 
                     }) {
 
@@ -232,6 +236,29 @@ struct SignUp : View {
     }
 }
 
+//func signInWithEmail(email: String, password: String, completion: @escaping (Bool, String, User?) -> Void) {
+//    Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
+//        if let error = err {
+//            completion(false, error.localizedDescription, nil)
+//            return
+//        }
+//
+//        guard let user = res?.user else {
+//            completion(false, "Пользователь не найден", nil)
+//            return
+//        }
+//
+//        let userObject = User(email: email, password: password)
+//        updateUserDocument(userID: user.uid, user: userObject) { success, error in
+//            if let error = error {
+//                completion(false, error.localizedDescription, nil)
+//                return
+//            }
+//
+//            completion(true, user.email ?? "", userObject)
+//        }
+//    }
+//}
 
 func signInWithEmail(email: String,password : String,completion: @escaping (Bool,String)->Void) {
     Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
@@ -243,13 +270,45 @@ func signInWithEmail(email: String,password : String,completion: @escaping (Bool
     }
 }
 
-func signUpWithEmail(email: String, password : String,completion: @escaping (Bool,String)->Void) {
+
+
+func signUpWithEmail(email: String, password : String, completion: @escaping (Bool,String)->Void) {
     Auth.auth().createUser(withEmail: email, password: password) { (res, err) in
         if err != nil{
             completion(false,(err?.localizedDescription)!)
             return
         }
         completion(true,(res?.user.email)!)
+    }
+//    Auth.auth().createUser(withEmail: email, password: password) { (res, err) in
+//            if let error = err {
+//                completion(false, error.localizedDescription, nil)
+//                return
+//            }
+//
+//            if let user = res?.user {
+//                let currentUser = User(email: user.email ?? "", password: "")
+//                completion(true, "Signed up successfully", currentUser)
+//            } else {
+//                completion(false, "Failed to sign up", nil)
+//            }
+//        }
+}
+
+func updateUserDocument(userID: String, user: User, completion: @escaping (Bool, Error?) -> Void) {
+    let db = Firestore.firestore()
+    
+    db.collection("users").document(userID).setData([
+        "email": user.email,
+        "password": user.password
+        // Дополнительные свойства пользователя
+    ]) { error in
+        if let error = error {
+            completion(false, error)
+            return
+        }
+        
+        completion(true, nil)
     }
 }
 
