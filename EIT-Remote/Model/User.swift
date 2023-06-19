@@ -7,14 +7,25 @@
 
 import Foundation
 
-struct User {
+struct UserModel: Identifiable {
+    var id: String
+    var name: String
+    var surname: String
+    var lastName: String
+    var phone: String
     var email: String
-    var password: String
     
-    // Дополнительные свойства пользователя
     
-    init(email: String, password: String) {
-        self.email = email
-        self.password = password
+    var representation: [String : Any] {
+        var repres = [String : Any]()
+        
+        repres["id"] = self.id
+        repres["name"] = self.name
+        repres["surname"] = self.surname
+        repres["lastName"] = self.lastName
+        repres["phone"] = self.phone
+        repres["email"] = self.email
+        
+        return repres
     }
 }

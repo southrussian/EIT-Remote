@@ -12,133 +12,134 @@ struct VentilationView: View {
     @State private var showAlert: Bool = false
     @State private var isReceiving = false
     @State private var timer: Timer?
+    @State private var generatedPDFURL: URL?
+    @State var showShareLink: Bool = false
+    @State var generatedImage: Image?
     
-    var patient: Patient
+    @State var viewModel: VentilationViewModel
 
     var body: some View {
-        ScrollView {
-            VStack {
-                HStack {
-                    Text("Вентиляция: \(patient.name) \(patient.surname)")
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(Color.theme.accent)
-                    Spacer()
-                    Text("")
-                }
-                .offset(y: -30)
-                .padding(.horizontal)
-                HStack(spacing: 10) {
-                    Text("IP-адрес:")
-                        .foregroundColor(.mint)
-                    Spacer()
-                    Text(patient.ipAddress ?? "")
-//                    TextField("Введите IP-адрес", text: $ipAddress)
-//                        .padding()
-//                        .background(
-//                            RoundedRectangle(cornerRadius: 10).fill(Color.mint.opacity(0.1)).frame(height: 30)
-//                        )
-//                        .padding(.horizontal)
-                }
-                .padding(.horizontal)
-                HStack(spacing: 10)
-                {
-                    Text("Порт:")
-                        .foregroundColor(.mint)
-                    Spacer()
-                    Text(patient.port ?? "")
-//                    TextField("Введите номер порта", text: $portNumber)
-//                        .padding()
-//                        .background(
-//                            RoundedRectangle(cornerRadius: 10).fill(Color.mint.opacity(0.1)).frame(height: 30)
-//                        )
-//                        .padding(.horizontal)
-                }
-                .padding(.horizontal)
-                
-
+        GeometryReader { proxy in
+            let size = proxy.size
+            ScrollView {
                 VStack {
-                    Button(action: {
-                        if isReceiving {
-                            stopReceiving()
-                        } else {
-                            startReceiving()
-                        }
-                    }) {
-                        Text(isReceiving ? "Остановить получение" : "Получить изображение")
-                            .frame(width: 250, height: 30)
-                            .background(isReceiving ? .red : .mint)
-                            .foregroundColor(.white)
-                            .font(.headline)
-                            .cornerRadius(10)
-                            .padding()
-                    }
-//                            .onDisappear {
-//                                stopReceiving()
-//                            }
-                }
-                .padding(15)
-                
-                if vlData.count >= 2, fhData.count >= 2 {
-                    let vlValue = vlData.withUnsafeBytes { $0.load(as: UInt16.self) }
-                    let _ = fhData.withUnsafeBytes { $0.load(as: UInt16.self) }
-                    let vl = Float(vlValue) / 10.0
-                    let vr = 100 - vl
                     HStack {
-                        Text("VL (%): \(vl.clean)")
-                            .padding(.horizontal)
-                        Text("VR (%): \(vr.clean)")
-                            .padding()
-//                        Text("R/L: \((vr/vl * 100.0).clean)")
-//                            .padding()
-                    }
+                        Text("Вентиляция: \(viewModel.patient.name) \(viewModel.patient.surname)")
+                            .font(.title)
+                            .bold()
+                        Spacer()
                     
-                } else {
-                    Text("VL (%): н/д       VR (%): н/д")
-                        .padding()
-                }
-                
-                Text("")
-                Text("")
+                    }
+                    .offset(y: -30)
+                    .padding(.horizontal)
+                    HStack {
+                        Text("IP-адрес:")
+                            .foregroundColor(.mint)
+                        Spacer()
+                        Text(viewModel.patient.ipAddress ?? "")
 
-                if let image = UIImage(data: bmpData) {
-                    if UIDevice.current.userInterfaceIdiom == .pad {
-                        Image(uiImage: image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .cornerRadius(15)
-                            .padding()
-                    } else {
-                        Image(uiImage: image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .cornerRadius(15)
                     }
+                    .padding(.horizontal)
+                    HStack {
+                        Text("Порт:")
+                            .foregroundColor(.mint)
+                        Spacer()
+                        Text(viewModel.patient.port ?? "")
+                    }
+                    .padding(.horizontal)
+                    HStack {
+                        Text("Время:")
+                            .foregroundColor(.mint)
+                        Spacer()
+                        Time()
+                    }
+                    .padding(.horizontal)
+                    VStack {
+                        Button(action: {
+                            if isReceiving {
+                                stopReceiving()
+                            } else {
+                                startReceiving()
+                            }
+                        }) {
+                            Text(isReceiving ? "Остановить получение" : "Получить изображение")
+                                .frame(width: 250, height: 30)
+                                .background(isReceiving ? .red : .mint)
+                                .foregroundColor(.white)
+                                .font(.headline)
+                                .cornerRadius(10)
+                                .padding()
+                        }
+                    }
+                    .padding(15)
+                
+                    if vlData.count >= 2, fhData.count >= 2 {
+                        let vlValue = vlData.withUnsafeBytes { $0.load(as: UInt16.self) }
+                        let _ = fhData.withUnsafeBytes { $0.load(as: UInt16.self) }
+                        let vl = Float(vlValue) / 10.0
+                        let vr = 100 - vl
+                        HStack {
+                            Text("VL (%): \(vl.clean)")
+                                .padding(.horizontal)
+                            Text("VR (%): \(vr.clean)")
+                                .padding()
+                        }
                     
-                } else {
-                    Text("Изображение пока не принято")
+                    } else {
+                        Text("VL (%): н/д       VR (%): н/д")
+                            .padding()
+                    }
+                    Text("")
+                    Text("")
+                
+                    if let image = UIImage(data: bmpData) {
+                        if UIDevice.current.userInterfaceIdiom == .pad {
+                            Image(uiImage: image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .cornerRadius(15)
+                                .padding()
+                        } else {
+                            Image(uiImage: image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .cornerRadius(15)
+                        }
+                    
+                    } else {
+                        Text("Изображение пока не принято")
+                    }
+                }
+                .padding()
+                .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text("Ошибка подключения"),
+                        message: Text("Неверный IP-адрес или номер порта"),
+                        dismissButton: .default(Text("ОК"))
+                    )
                 }
             }
-            .padding()
-            .alert(isPresented: $showAlert) {
-                Alert(
-                    title: Text("Ошибка подключения"),
-                    message: Text("Неверный IP-адрес или номер порта"),
-                    dismissButton: .default(Text("ОК"))
-                )
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    renderView(viewSize: size)
+                }
+            }
+        }
+        .sheet(isPresented: $showShareLink) {
+            if let generatedPDFURL = generatedPDFURL{
+                ShareSheet(items: [generatedPDFURL])
+
             }
         }
     }
-    
     
     func truncateFloat(_ value: Float) -> Float {
         let truncatedValue = round(value * 10) / 10
         return truncatedValue
     }
 
-    
     private func startReceiving() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.4, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { _ in
                 // Вызов функции startReceiving
             receiveImage()
         }
@@ -152,12 +153,7 @@ struct VentilationView: View {
 
     private func receiveImage() {
         isReceiving = true
-//        guard let serverAddress = ipAddress as CFString?, let port = UInt32(portNumber) else {
-//            print("Invalid server address or port")
-//            showAlert = true
-//            return
-//        }
-        guard let serverAddress = patient.ipAddress as CFString?, let port = UInt32(patient.port ?? "") else {
+        guard let serverAddress = viewModel.patient.ipAddress as CFString?, let port = UInt32(viewModel.patient.port ?? "") else {
             print("Invalid server address or port")
             showAlert = true
             return
@@ -185,8 +181,6 @@ struct VentilationView: View {
         }
                 
         var isFirst = true
-//            var vl = Data()
-//            var fh = Data()
         var vl: UInt16 = 0
         var fh: UInt16 = 0
         var headerData = Data()
@@ -196,7 +190,6 @@ struct VentilationView: View {
         let _ = stream.read(&buff, maxLength: buff.count)
         let _ = Int(buff[0])
         var bmp: Data = Data()
-                //print(size)
         while true {
             var buffer = [UInt8](repeating: 0, count: 49214)
                     
@@ -207,24 +200,16 @@ struct VentilationView: View {
                 bytesReadTotal += bytesRead
                 print(bytesReadTotal)
                 if isFirst {
-//                        vl.append(contentsOf: buffer[0..<2])
-//                        fh.append(contentsOf: buffer[4..<6])
                     vl = UInt16(buffer[0]) << 8 | UInt16(buffer[1])
                     fh = UInt16(buffer[4]) << 8 | UInt16(buffer[5])
-//                        print(vlData)
-//                        print(fhData)
                     headerData.append(contentsOf: buffer[8..<62])
                     bmp.append(contentsOf: buffer[62..<bytesRead])
                     isFirst = false
                 } else {
-//                        vlData.append(contentsOf: buffer[0..<2])
-//                        fhData.append(contentsOf: buffer[4..<6])
                     bmp.append(contentsOf: buffer[0..<bytesRead])
                 }
                         
                 if isFirst == false && bytesReadTotal == 49214{
-                            // The first image has been fully received
-                            // Check if header is valid BMP header
                     if headerData.count == 54 && headerData[0] == 0x42 && headerData[1] == 0x4D {
                         print(headerData.count)
   
@@ -232,14 +217,10 @@ struct VentilationView: View {
                         self.vlData.removeAll()
                         self.fhData.removeAll()
                         self.bmpData = headerData + bmp[0...] // Remove header from data
-//                            self.vlData = vl[0..<2]
-//                            self.fhData = fh[0..<2]
                         self.vlData = Data([UInt8(vl >> 8), UInt8(vl & 0xFF)]) // Store vl as Data
                         self.fhData = Data([UInt8(fh >> 8), UInt8(fh & 0xFF)])
-//                                print(self.bmpData)
                         print(self.vlData)
                         print(self.fhData)
-
                         return
                     }
                 }
@@ -249,6 +230,27 @@ struct VentilationView: View {
             }
         }
     }
+    @MainActor
+    func renderView(viewSize: CGSize) {
+        let renderer = ImageRenderer(content: VentilationView(viewModel: viewModel).frame(width: viewSize.width, height: viewSize.height, alignment: .center))
+        if let image = renderer.uiImage {
+            generatedImage = Image(uiImage: image)
+        }
+        let tempUrl = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+        let renderUrl = tempUrl.appendingPathComponent("\(UUID().uuidString).pdf")
+        
+        if let consumer = CGDataConsumer(url: renderUrl as CFURL), let context = CGContext(consumer: consumer, mediaBox: nil, nil) {
+            renderer.render { size, renderer in
+                var mediaBox = CGRect(origin: .zero, size: size)
+                context.beginPage(mediaBox: &mediaBox)
+                renderer(context)
+                context.endPDFPage()
+                context.closePDF()
+                generatedPDFURL = renderUrl
+            }
+        }
+    }
+    
 }
 
 extension Float {

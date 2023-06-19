@@ -16,7 +16,17 @@ struct EIT_RemoteApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            SplashScreenView()
+//            SplashScreenView()
+            if let user = AuthService.shared.currentUser {
+                if user.uid == "Ld6mrPcoxzZHyHKvGEEkmUE2d253" {
+                    AdminOrdersView()
+                } else {
+                    let viewModel = TabViewModel(user: user)
+                    Tab(viewModel: viewModel)
+                }
+            } else {
+                AuthView()
+            }
         }
     }
 }
