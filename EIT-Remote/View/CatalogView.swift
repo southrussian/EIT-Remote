@@ -18,20 +18,20 @@ struct CatalogView: View {
                 .padding(.top, 20)
                 .font(.system(size: 30, weight: .bold))
                 .foregroundColor(.mint)
-                List {
-                        ForEach(viewModel.patients, id: \.id) { patient in
-                            NavigationLink  {
-                                
-                                let viewModel = PatientDetailsViewModel(patient: patient)
-                                
-                                DetailPatientView(viewModel: viewModel)
-                            } label: {
-                                PatientCell(patient: patient)
-                                    .padding(.horizontal, 20)
-                            }
-                        }
+            List {
+                ForEach(viewModel.patients, id: \.id) { patient in
+                    NavigationLink  {
+                        
+                        let viewModel = PatientDetailsViewModel(patient: patient)
+                        
+                        DetailPatientView(viewModel: viewModel)
+                    } label: {
+                        PatientCell(patient: patient)
+                            .padding(.horizontal, 20)
+                    }
                 }
-                .listStyle(.plain)
+            }
+            .listStyle(.plain)
         }
         .onAppear{
             self.viewModel.getProducts()
