@@ -15,6 +15,7 @@ Screenshots of working app below
 <img width="458" alt="image" src="https://github.com/southrussian/EIT-Remote/assets/57446339/6dfc7282-4851-4991-8dcc-8bb204a2df68">
 
 How it is working in pair with electrical impedance tomogrphy device:
+
 <img width="507" alt="image" src="https://github.com/southrussian/EIT-Remote/assets/57446339/0429e1f0-6680-4a81-b6b8-47f1ad830f6e">
 
 
