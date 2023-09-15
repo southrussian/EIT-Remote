@@ -9,7 +9,7 @@ Stack: Swift, SwiftUI, Firebase.
 
 Screenshots of working app below
 
-<img width="336" alt="image" src="https://github.com/southrussian/EIT-Remote/assets/57446339/3b6ebc69-e272-49fb-ae40-b0452a2fb23a">
+<img width="388" alt="image" src="https://github.com/southrussian/EIT-Remote/assets/57446339/1dba9ec3-22b5-472f-89bb-969374d0a562">
 <img width="479" alt="image" src="https://github.com/southrussian/EIT-Remote/assets/57446339/1bf41170-a6a7-4098-bb9c-64cbf9d12668">
 <img width="420" alt="image" src="https://github.com/southrussian/EIT-Remote/assets/57446339/24e88c2a-8f71-41e1-9f80-9cfa7083d441">
 <img width="458" alt="image" src="https://github.com/southrussian/EIT-Remote/assets/57446339/6dfc7282-4851-4991-8dcc-8bb204a2df68">
