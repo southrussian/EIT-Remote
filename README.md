@@ -6,7 +6,9 @@ As a medical measuring device, this paper considers an electrical impedance tomo
 The goals of creating the system: providing medical personnel with tools for monitoring the condition of patients without constant bedside monitoring; simplification of work with patient documentation and generation of examination reports; achieving maximum efficiency in decision-making by medical personnel to ensure the well-being of the patient’s health and life.
 
 Stack: Swift, SwiftUI, Firebase.
+
 Screenshots of working app below
+
 <img width="336" alt="image" src="https://github.com/southrussian/EIT-Remote/assets/57446339/3b6ebc69-e272-49fb-ae40-b0452a2fb23a">
 <img width="479" alt="image" src="https://github.com/southrussian/EIT-Remote/assets/57446339/1bf41170-a6a7-4098-bb9c-64cbf9d12668">
 <img width="420" alt="image" src="https://github.com/southrussian/EIT-Remote/assets/57446339/24e88c2a-8f71-41e1-9f80-9cfa7083d441">
