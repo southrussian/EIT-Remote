@@ -1,5 +1,8 @@
 #  EIT Remote
 
-Приложение предназначено для работы с документацией пациентов медицинского учреждения, планирования работы медицинского работника и удаленного взаимодействия с устройством электроимпедансной томографии. Для разработки использовался фреймворк SwiftUI. Приложение предназначено для работы с программным модулем VentilatorExchange https://www.researchgate.net/publication/347186511_Integration_principles_of_the_electrical_impedance_tomography_module_with_a_lung_ventilator
+EIT Remote is a special iOS app for medical purposes. 
+The relevance of the app is determined by the need to facilitate the work of the staff of medical institutions, providing the ability to conduct electronic document management of patients and examinations performed, and work with medical measuring devices.
+As a medical measuring device, this paper considers an electrical impedance tomography apparatus for studying human lungs.
+The goals of creating the system: providing medical personnel with tools for monitoring the condition of patients without constant bedside monitoring; simplification of work with patient documentation and generation of examination reports; achieving maximum efficiency in decision-making by medical personnel to ensure the well-being of the patient’s health and life.
 
-Поддерживается аутентификация и хранение данных с помощью Firebase.
+Stack: Swift, SwiftUI, Firebase.
