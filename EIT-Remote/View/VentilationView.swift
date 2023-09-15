@@ -36,7 +36,7 @@ struct VentilationView: View {
                         Text("IP-адрес:")
                             .foregroundColor(.mint)
                         Spacer()
-                        Text(viewModel.patient.ipAddress ?? "")
+                        Text(viewModel.patient.ipAddress)
 
                     }
                     .padding(.horizontal)
@@ -44,7 +44,7 @@ struct VentilationView: View {
                         Text("Порт:")
                             .foregroundColor(.mint)
                         Spacer()
-                        Text(viewModel.patient.port ?? "")
+                        Text(viewModel.patient.port)
                     }
                     .padding(.horizontal)
                     HStack {
